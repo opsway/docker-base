@@ -1,4 +1,6 @@
 #!/bin/bash
+source /tmp/env.sh
+
 echo -n "${HTTP_AUTH_USER}:" >> /etc/nginx/htpasswd
 openssl passwd -apr1 -salt "$HTTP_AUTH_SALT" "$HTTP_AUTH_PASSWORD" >> /etc/nginx/htpasswd
 
