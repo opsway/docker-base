@@ -10,3 +10,4 @@ sleep 60
 mysqladmin -u root password "$MYSQL_PASSWORD"
 mysql -u root -p$MYSQL_PASSWORD -e "CREATE DATABASE $MYSQL_DATABASE;"
 mysql -u root -p$MYSQL_PASSWORD $MYSQL_DATABASE < /tmp/init.sql
+mysql -u root -p$MYSQL_PASSWORD -e "use $MYSQL_DATABASE; UPDATE core_config_data SET value='{{base_url}}' where path='web/unsecure/base_url';"

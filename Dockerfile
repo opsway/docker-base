@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ADD ./docker/init.sh /tmp/init.sh
 ADD ./docker/entrypoint.sh /entrypoint.sh
 
-RUN apt-get -y update && apt-get -y install --no-install-recommends curl mc vim ncdu htop nginx-full \
+RUN apt-get -y update && apt-get -y install --no-install-recommends curl mc vim ncdu htop nano nginx-full \
     php7.0-fpm php7.0-cli php7.0-mcrypt php7.0-gd php7.0-intl php7.0-mysql \
     php7.0-curl php7.0-soap php7.0-xml php7.0-zip php7.0-xmlrpc php7.0-mbstring \
     php-pclzip mysql-client mysql-server postfix git-core composer && \
