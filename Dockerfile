@@ -9,7 +9,7 @@ ADD ./docker/entrypoint.sh /entrypoint.sh
 RUN apt-get -y update && apt-get -y install --no-install-recommends curl mc vim ncdu htop nano nginx-full \
     php7.0-fpm php7.0-cli php7.0-mcrypt php7.0-gd php7.0-intl php7.0-mysql \
     php7.0-curl php7.0-soap php7.0-xml php7.0-zip php7.0-xmlrpc php7.0-mbstring \
-    php-pclzip mysql-client mysql-server postfix git-core composer && \
+    php-pclzip mysql-client mysql-server postfix git-core composer python ssh && \
     curl -sS https://raw.githubusercontent.com/colinmollenhour/modman/master/modman > /usr/local/bin/modman && \
     curl -sS https://files.magerun.net/n98-magerun.phar > /usr/local/bin/n98-magerun.phar && \
     chmod +x /usr/local/bin/modman && \
